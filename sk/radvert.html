@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="sk">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="cache-control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="refresh" content="2; url=$(link-orig)">
+    <base href="http://$(hostname)/">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113859314-1"></script>
+    <script src="js/gtag.js"></script>
+    <meta name="author" content="© 2017 – 2018  ConNet Group, s. r. o. Všetky práva vyhradené.">
+    <meta name="description" content="MikroTik Hotspot stránky prepísané do HTML5 a Bootstrap 4 dizajnu">
+    <meta name="robots" content="index, follow, noodp">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:description" content="MikroTik Hotspot stránky prepísané do HTML5 a Bootstrap 4 dizajnu">
+    <meta property="og:image" content="https://github.com/connet/mikrotik-hotspot/og-image.png">
+    <meta property="og:title" content="Internet Hotspot vyvinutý firmou ConNet Group">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://github.com/connet/mikrotik-hotspot/sk/radvert.html">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="canonical" href="https://github.com/connet/mikrotik-hotspot/sk/radvert.html">
+    <link rel="icon" href="favicon.png" type="image/png">
+    <link rel="publisher" href="https://plus.google.com/101855841841372027462">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/cookieconsent.min.css">
+    <script src="js/jquery.slim.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/cookieconsent.min.js"></script>
+    <script src="sk/cookie.js"></script>
+    <title>Internet Hotspot &ndash; Reklama</title>
+  </head>
+  <body onLoad="openAdvert()">
+    <main>
+      <div class="jumbotron jumbotron-fluid bg-dark text-light text-center">
+        <div class="container">
+          <h1>Reklama</h1>
+        </div>
+      </div>
+      <div class="container-fluid">
+        <div class="container text-center">
+          <p>Ak sa nič nedeje, otvorte
+            <a href="$(link-redirect)" target="hotspot_advert">reklamu</a> manuálne.
+          </p>
+        </div>
+      </div>
+    </main>
+    <script>
+      <!--
+      var popup = '';
+      function openOrig() {
+        if (window.focus) popup.focus();
+        location.href = unescape('$(link-orig-esc)');
+      }
+      function openAd() {
+        location.href = unescape('$(link-redirect-esc)');
+      }
+      function openAdvert() {
+        if (window.name != 'hotspot_advert') {
+          popup = open('$(link-redirect)', 'hotspot_advert', '');
+          setTimeout("openOrig()", 1000);
+          return;
+        }
+        setTimeout("openAd()", 1000);
+      }
+      -->
+    </script>
+  </body>
+</html>

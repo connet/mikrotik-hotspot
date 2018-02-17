@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="sk">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="cache-control" content="no-cache, no-store, must-revalidate">
+    <base href="http://$(hostname)/">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113859314-1"></script>
+    <script src="js/gtag.js"></script>
+    <meta name="author" content="© 2017 – 2018  ConNet Group, s. r. o. Všetky práva vyhradené.">
+    <meta name="description" content="MikroTik Hotspot stránky prepísané do HTML5 a Bootstrap 4 dizajnu">
+    <meta name="robots" content="index, follow, noodp">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:description" content="MikroTik Hotspot stránky prepísané do HTML5 a Bootstrap 4 dizajnu">
+    <meta property="og:image" content="https://github.com/connet/mikrotik-hotspot/og-image.png">
+    <meta property="og:title" content="Internet Hotspot vyvinutý firmou ConNet Group">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://github.com/connet/mikrotik-hotspot/sk/login.html">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="canonical" href="https://github.com/connet/mikrotik-hotspot/sk/login.html">
+    <link rel="icon" href="favicon.png" type="image/png">
+    <link rel="publisher" href="https://plus.google.com/101855841841372027462">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/cookieconsent.min.css">
+    <script src="js/jquery.slim.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/cookieconsent.min.js"></script>
+    <script src="sk/cookie.js"></script>
+    <title>Internet Hotspot &ndash; Prihlásenie sa</title>
+  </head>
+  <body>
+    <header>
+      <!-- $(if chap-id) -->
+      <form name="sendin" action="$(link-login-only)" method="post">
+        <input type="hidden" name="username">
+        <input type="hidden" name="password">
+        <input type="hidden" name="dst" value="$(link-orig)">
+        <input type="hidden" name="popup" value="true">
+      </form>
+      <!-- $(endif) -->
+      <div class="container-fluid bg-dark">
+        <div class="container">
+          <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+            <a class="navbar-brand mx-auto" href="/">
+              <img class="d-inline-block align-top" src="img/wifi-tethering-white.svg" alt="">
+              Internet Hotspot
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarLang">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse mt-1" id="navbarLang">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="$(link-login-only)?target=en&amp;dst=$(link-orig-esc)">English</a>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link" href="$(link-login-only)?target=sk&amp;dst=$(link-orig-esc)">Slovensky</a>
+                </li>
+              </ul><hr class="bg-light">
+              <span class="navbar-text">
+                Vyvinuté firmou <a href="https://www.connet-group.sk" target="_blank">ConNet Group</a>
+              </span>
+            </div>
+          </nav>
+        </div>
+      </div>
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container text-center">
+          <h1 class="display-3">Internet Hotspot</h1>
+          <p class="lead">Pre pripojenie k Internetu sa&nbsp;prosím&nbsp;prihláste</p>
+          <!-- $(if trial == 'yes') -->
+          <p>Pre dočasne bezplatný prístup, 
+            <a href="$(link-login-only)?dst=$(link-orig-esc)&amp;username=T-$(mac-esc)">kliknite&nbsp;sem</a>.
+          </p>
+          <!-- $(endif) -->
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="container mb-3">
+        <!-- $(if chap-id) -->	  
+        <form name="login" action="$(link-login-only)" method="post" onSubmit="return doLogin()">
+        <!-- $(else) -->
+        <form name="login" action="$(link-login-only)" method="post">
+        <!-- $(endif) -->
+          <input type="hidden" name="dst" value="$(link-orig)">
+          <input type="hidden" name="popup" value="true">
+          <fieldset>
+            <div class="form-group">
+              <label for="username"><strong>Meno:</strong></label>
+              <input id="username" class="form-control" name="username" type="text" value="$(username)" placeholder="Zadajte vaše používateľské meno" autofocus>
+            </div>
+            <div class="form-group">
+              <label for="password"><strong>Heslo:</strong></label>
+              <input id="password" class="form-control" name="password" type="password" placeholder="Zadajte vaše heslo">
+             </div>
+          </fieldset>
+          <div class="container text-center">
+            <input class="btn btn-primary btn-lg" type="submit" value="Prihlásiť sa">
+          </div>
+        </form>
+        <!-- $(if error) -->
+        <div class="alert alert-danger alert-dismissible fade show text-center my-3">
+          <strong>$(error)</strong>
+          <button class="close" type="button" data-dismiss="alert">
+            <span>&times;</span>
+          </button>
+        </div>
+        <!-- $(endif) -->
+      </div>
+    </main>
+    <script src="js/md5.js"></script>
+    <script>
+      <!--
+      function doLogin() {
+        document.sendin.username.value = document.login.username.value;
+        document.sendin.password.value = hexMD5('$(chap-id)' + document.login.password.value + '$(chap-challenge)');
+        document.sendin.submit();
+        return false;
+      }
+      -->
+    </script>
+  </body>
+</html>
