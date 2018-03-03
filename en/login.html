@@ -3,20 +3,20 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="cache-control" content="no-cache, no-store, must-revalidate">
-    <base href="http://$(hostname)/">
+    <base href="//$(hostname)/">
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113859314-1"></script>
     <script src="js/gtag.js"></script>
-    <meta name="author" content="© 2017 – 2018  ConNet Group, s. r. o. All rights reserved.">
+    <meta name="author" content="© 2017 – 2018 ConNet Group, s. r. o. All rights reserved.">
     <meta name="description" content="MikroTik Hotspot pages rewritten to HTML5 and Bootstrap 4 design">
     <meta name="robots" content="index, follow, noodp">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta property="og:description" content="MikroTik Hotspot pages rewritten to HTML5 and Bootstrap 4 design">
-    <meta property="og:image" content="https://github.com/connet/mikrotik-hotspot/og-image.png">
+    <meta property="og:image" content="https://raw.githubusercontent.com/connet/mikrotik-hotspot/master/og-image.png">
     <meta property="og:title" content="Internet Hotspot developed by ConNet Group">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://github.com/connet/mikrotik-hotspot/en/login.html">
+    <meta property="og:url" content="https://github.com/connet/mikrotik-hotspot/blob/master/en/login.html">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    <link rel="canonical" href="https://github.com/connet/mikrotik-hotspot/en/login.html">
+    <link rel="canonical" href="https://raw.githubusercontent.com/connet/mikrotik-hotspot/master/en/login.html">
     <link rel="icon" href="favicon.png" type="image/png">
     <link rel="publisher" href="https://plus.google.com/101855841841372027462">
     <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -48,15 +48,12 @@
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarLang">
               <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse mt-1" id="navbarLang">
-              <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                  <a class="nav-link" href="$(link-login-only)?target=en&amp;dst=$(link-orig-esc)">English</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="$(link-login-only)?target=sk&amp;dst=$(link-orig-esc)">Slovensky</a>
-                </li>
-              </ul><hr class="bg-light">
+            <div class="collapse navbar-collapse" id="navbarLang">
+              <div class="navbar-nav pl-2">
+                <a class="nav-item nav-link active" href="$(link-login-only)?target=en&amp;dst=$(link-orig-esc)">English</a>
+                <a class="nav-item nav-link" href="$(link-login-only)?target=sk&amp;dst=$(link-orig-esc)">Slovensky</a>
+              </div>
+              <hr class="bg-light">
               <span class="navbar-text">
                 Developed by <a href="https://www.connet-group.sk" target="_blank">ConNet Group</a>
               </span>
@@ -64,7 +61,7 @@
           </nav>
         </div>
       </div>
-      <div class="jumbotron jumbotron-fluid">
+      <div class="jumbotron jumbotron-fluid bg-light border-bottom">
         <div class="container text-center">
           <h1 class="display-3">Internet Hotspot</h1>
           <p class="lead">Please log on to use the Internet</p>

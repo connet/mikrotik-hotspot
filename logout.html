@@ -1,22 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sk">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="cache-control" content="no-cache, no-store, must-revalidate">
-    <base href="http://$(hostname)/">
+    <base href="//$(hostname)/">
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113859314-1"></script>
     <script src="js/gtag.js"></script>
-    <meta name="author" content="© 2017 – 2018  ConNet Group, s. r. o. All rights reserved.">
-    <meta name="description" content="MikroTik Hotspot pages rewritten to HTML5 and Bootstrap 4 design">
+    <meta name="author" content="© 2017 – 2018 ConNet Group, s. r. o. Všetky práva vyhradené.">
+    <meta name="description" content="MikroTik Hotspot stránky prepísané do HTML5 a Bootstrap 4 dizajnu">
     <meta name="robots" content="index, follow, noodp">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:description" content="MikroTik Hotspot pages rewritten to HTML5 and Bootstrap 4 design">
-    <meta property="og:image" content="https://github.com/connet/mikrotik-hotspot/og-image.png">
-    <meta property="og:title" content="Internet Hotspot developed by ConNet Group">
+    <meta property="og:description" content="MikroTik Hotspot stránky prepísané do HTML5 a Bootstrap 4 dizajnu">
+    <meta property="og:image" content="https://raw.githubusercontent.com/connet/mikrotik-hotspot/master/og-image.png">
+    <meta property="og:title" content="Internet Hotspot vyvinutý firmou ConNet Group">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://github.com/connet/mikrotik-hotspot/en/logout.html">
+    <meta property="og:url" content="https://github.com/connet/mikrotik-hotspot/blob/master/sk/logout.html">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    <link rel="canonical" href="https://github.com/connet/mikrotik-hotspot/en/logout.html">
+    <link rel="canonical" href="https://raw.githubusercontent.com/connet/mikrotik-hotspot/master/sk/logout.html">
     <link rel="icon" href="favicon.png" type="image/png">
     <link rel="publisher" href="https://plus.google.com/101855841841372027462">
     <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -25,14 +25,14 @@
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/cookieconsent.min.js"></script>
-    <script src="en/cookie.js"></script>
-    <title>Internet Hotspot &ndash; Logout</title>
+    <script src="sk/cookie.js"></script>
+    <title>Internet Hotspot &ndash; Odhlásenie sa</title>
   </head>
   <body>
     <main>
       <div class="jumbotron jumbotron-fluid bg-dark text-light text-center">
         <div class="container">
-          <h1>You've just logged&nbsp;out</h1>
+          <h1>Práve ste sa odhlásili</h1>
         </div>
       </div>
       <div class="container">
@@ -41,20 +41,20 @@
             Status
           </div>
           <ul class="list-group list-group-flush">
-            <li class="list-group-item"><strong>Your user name:</strong> $(username)</li>
-            <li class="list-group-item"><strong>Your IP address:</strong> $(ip)</li>
-            <li class="list-group-item"><strong>Your MAC address:</strong> $(mac)</li>
-            <li class="list-group-item"><strong>Session time:</strong> $(uptime)</li>
+            <li class="list-group-item"><strong>Vaše používateľské meno:</strong> $(username)</li>
+            <li class="list-group-item"><strong>Vaša IP adresa:</strong> $(ip)</li>
+            <li class="list-group-item"><strong>Vaša MAC adresa:</strong> $(mac)</li>
+            <li class="list-group-item"><strong>Dĺžka pripojenia:</strong> $(uptime)</li>
             <!-- $(if session-time-left) -->
-            <li class="list-group-item"><strong>Session time left:</strong> $(session-time-left)</li>
+            <li class="list-group-item"><strong>Zostávajúci čas:</strong> $(session-time-left)</li>
             <!-- $(endif) -->
-            <li class="list-group-item"><strong>Downloaded/uploaded bytes:</strong> $(bytes-out-nice)/$(bytes-in-nice)</li>
+            <li class="list-group-item"><strong>Prijaté/odoslané bajty:</strong> $(bytes-out-nice)/$(bytes-in-nice)</li>
           </ul>
         </div>
       </div>
       <div class="container text-center my-3">
         <form action="$(link-login)" name="login" onSubmit="return openLogin()">
-          <input class="btn btn-primary" type="submit" value="Log in">
+          <input class="btn btn-primary" type="submit" value="Prihlásiť sa">
         </form>
       </div>
     </main>

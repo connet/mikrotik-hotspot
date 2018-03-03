@@ -12,9 +12,9 @@ window.cookieconsent.initialise({
   },
   "position": "bottom-right",
   "content": {
-    "message": "We serve cookie files to analyse traffic to this site. Information about your use of our site is shared with Google for that purpose.",
+    "message": "Používame súbory cookie na analýzu návštevnosti tohto webu. Z tohto dôvodu zdieľame so spoločnosťou Google informácie o tom, ako používate náš web.",
     "dismiss": "OK",
-    "link": "See details",
-    "href": "en/cookie.html"
+    "link": "Zobraziť podrobnosti",
+    "href": "sk/cookie.html"
   }
 })});

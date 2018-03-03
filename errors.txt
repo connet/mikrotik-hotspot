@@ -12,47 +12,47 @@
 # It should never happen. If it will, error page will be shown
 # displaying this error message (error-orig will describe what has happened)
 
-internal-error = internal error ($(error-orig))
+internal-error = Interná chyba. ($(error-orig))
 
 # config-error
 # Should never happen if hotspot is configured properly.
 
-config-error = configuration error ($(error-orig))
+config-error = Konfiguračná chyba. ($(error-orig))
 
 # not-logged-in
 # Will happen, if status or logout page is requested by user,
 # which actually is not logged in
 
-not-logged-in = you are not logged in (ip $(ip))
+not-logged-in = Nie ste prihlásený/á. (ip $(ip))
 
 # ippool-empty
 # IP address for user is to be assigned from ip pool, but there are no more
 # addresses in that pool
 
-ippool-empty = cannot assign ip address - no more free addresses from pool
+ippool-empty = Nie je možné prideliť IP adresu. Ďalšie voľné IP adresy nie sú dostupné.
 
 # shutting-down
 # When shutdown is executed, new clients are not accepted
 
-shutting-down = hotspot service is shutting down
+shutting-down = Internet Hotspot sa vypína.
 
 # user-session-limit
 # If user profile has limit of shared-users, then this error will be shown
 # after reaching this limit
 
-user-session-limit = no more sessions are allowed for user $(username)
+user-session-limit = Nie je povolené ďalšie pripojenie pre používateľa $(username)
 
 # license-session-limit
 # Depending on licence number of active hotspot clients is limited to
 # one or another amount. If this limit is reached, following error is displayed.
 
-license-session-limit = session limit reached ($(error-orig))
+license-session-limit = Dosiahnutý limit počtu pripojení ($(error-orig))
 
 # wrong-mac-username
 # If username looks like MAC address (12:34:56:78:9a:bc), but is not
 # a MAC address of this client, login is rejected
 
-wrong-mac-username = invalid username ($(username)): this MAC address is not yours
+wrong-mac-username = Neplatné meno ($(username)): Táto MAC adresa vám nepatrí.
 
 # chap-missing
 # If http-chap login method is used, but hotspot program does not receive
@@ -65,38 +65,38 @@ wrong-mac-username = invalid username ($(username)): this MAC address is not you
 # If JavaScript is enabled and login.html page is valid,
 # then retrying to login usually fixes this problem.
 
-chap-missing = web browser did not send challenge response (try again, enable JavaScript)
+chap-missing = Webový prehliadač neposlal odpoveď na výzvu k autentifikácii (povoľte JavaScript a skúste to znova).
 
 # invalid-username
 # Most general case of invalid username or password. If RADIUS server
 # has sent an error string with Access-Reject message, then it will
 # override this setting.
 
-invalid-username = invalid username or password
+invalid-username = Neplatné meno alebo heslo.
 
 # invalid-mac
 # Local users (on hotspot server) can be bound to some MAC address. If login
 # from different MAC is tried, this error message will be shown.
 
-invalid-mac = user $(username) is not allowed to log in from this MAC address
+invalid-mac = Používateľovi $(username) nie je povolené prihlásiť sa z tejto MAC adresy.
 
 # uptime-limit, traffic-limit
 # For local hotspot users in case if limits are reached
 
-uptime-limit = user $(username) has reached uptime limit
-traffic-limit = user $(username) has reached traffic limit
+uptime-limit = Používateľ $(username) dosiahol limit dĺžky pripojenia.
+traffic-limit = Používateľ $(username) dosiahol limit prenesených dát.
 
 # radius-timeout
 # User is authenticated by RADIUS server, but no response is received from it,
 # following error will be shown.
 
-radius-timeout = RADIUS server is not responding
+radius-timeout = RADIUS server neodpovedá.
 
 # auth-in-progress
 # Authorization in progress. Client already has issued an authorization request
 # which is not yet complete.
 
-auth-in-progress = already authorizing, retry later
+auth-in-progress = Už autorizované, skúste neskôr.
 
 # radius-reply
 # Radius server returned some custom error message

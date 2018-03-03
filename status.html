@@ -1,25 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sk">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="cache-control" content="no-cache, no-store, must-revalidate">
     <!-- $(if refresh-timeout) -->
     <meta http-equiv="refresh" content="$(refresh-timeout-secs)">
     <!-- $(endif) -->
-    <base href="http://$(hostname)/">
+    <base href="//$(hostname)/">
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113859314-1"></script>
     <script src="js/gtag.js"></script>
-    <meta name="author" content="© 2017 – 2018  ConNet Group, s. r. o. All rights reserved.">
-    <meta name="description" content="MikroTik Hotspot pages rewritten to HTML5 and Bootstrap 4 design">
+    <meta name="author" content="© 2017 – 2018 ConNet Group, s. r. o. Všetky práva vyhradené.">
+    <meta name="description" content="MikroTik Hotspot stránky prepísané do HTML5 a Bootstrap 4 dizajnu">
     <meta name="robots" content="index, follow, noodp">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:description" content="MikroTik Hotspot pages rewritten to HTML5 and Bootstrap 4 design">
-    <meta property="og:image" content="https://github.com/connet/mikrotik-hotspot/og-image.png">
-    <meta property="og:title" content="Internet Hotspot developed by ConNet Group">
+    <meta property="og:description" content="MikroTik Hotspot stránky prepísané do HTML5 a Bootstrap 4 dizajnu">
+    <meta property="og:image" content="https://raw.githubusercontent.com/connet/mikrotik-hotspot/master/og-image.png">
+    <meta property="og:title" content="Internet Hotspot vyvinutý firmou ConNet Group">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://github.com/connet/mikrotik-hotspot/en/status.html">
+    <meta property="og:url" content="https://github.com/connet/mikrotik-hotspot/blob/master/sk/status.html">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    <link rel="canonical" href="https://github.com/connet/mikrotik-hotspot/en/status.html">
+    <link rel="canonical" href="https://raw.githubusercontent.com/connet/mikrotik-hotspot/master/sk/status.html">
     <link rel="icon" href="favicon.png" type="image/png">
     <link rel="publisher" href="https://plus.google.com/101855841841372027462">
     <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -28,7 +28,7 @@
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/cookieconsent.min.js"></script>
-    <script src="en/cookie.js"></script>
+    <script src="sk/cookie.js"></script>
     <title>Internet Hotspot &ndash; Status</title>
   </head>
   <!-- $(if advert-pending == 'yes') -->
@@ -41,9 +41,9 @@
         <div class="jumbotron jumbotron-fluid bg-dark text-light text-center">
           <div class="container">
             <!-- $(if login-by == 'trial') -->
-            <h1>Welcome trial&nbsp;user!</h1>
+            <h1>Vitajte, náš hosť!</h1>
             <!-- $(elif login-by != 'mac') -->
-            <h1>Welcome $(username)!</h1>
+            <h1>Vitajte $(username)!</h1>
             <!-- $(endif) -->
           </div>
         </div>
@@ -53,26 +53,26 @@
               Status
             </div>
             <ul class="list-group list-group-flush">
-              <li class="list-group-item"><strong>Your IP address:</strong> $(ip)</li>
-              <li class="list-group-item"><strong>Downloaded/uploaded bytes:</strong> $(bytes-out-nice)/$(bytes-in-nice)</li>
+              <li class="list-group-item"><strong>Vaša IP adresa:</strong> $(ip)</li>
+              <li class="list-group-item"><strong>Prijaté/odoslané bajty:</strong> $(bytes-out-nice)/$(bytes-in-nice)</li>
               <!-- $(if session-time-left) -->
-              <li class="list-group-item"><strong>Uptime/session time left:</strong> $(uptime)/$(session-time-left)</li>
+              <li class="list-group-item"><strong>Dĺžka pripojenia/zostávajúci čas:</strong> $(uptime)/$(session-time-left)</li>
               <!-- $(else) -->
-              <li class="list-group-item"><strong>Uptime:</strong> $(uptime)</li>
+              <li class="list-group-item"><strong>Dĺžka pripojenia:</strong> $(uptime)</li>
               <!-- $(endif) -->
               <!-- $(if blocked == 'yes') -->
               <li class="list-group-item"><strong>Status:</strong>
-                <a href="$(link-advert)" target="hotspot_advert">Advertisement</a> required.
+                <a href="$(link-advert)" target="hotspot_advert">Reklama</a> je požadovaná.
               </li>
               <!-- $(elif refresh-timeout) -->
-              <li class="list-group-item"><strong>Status refresh:</strong> $(refresh-timeout)</li>
+              <li class="list-group-item"><strong>Obnova statusu:</strong> $(refresh-timeout)</li>
               <!-- $(endif) -->
             </ul>
           </div>
         </div>
         <div class="container text-center my-3">
           <!-- $(if login-by-mac != 'yes') -->
-          <input class="btn btn-primary" type="submit" value="Log off">
+          <input class="btn btn-primary" type="submit" value="Odhlásiť sa">
           <!-- $(endif) -->
         </div>
       </form>
